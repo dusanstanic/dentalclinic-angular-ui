@@ -1,0 +1,25 @@
+<h1 class="appointment-title">Make Appointment</h1>
+
+<div class="login__form">
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div class="form-group">
+      <label class="phoneNumber">Phone Number</label>
+      <input
+        type="number"
+        class="form-control"
+        id="phoneNumber"
+        name="phoneNumber"
+        placeholder="Enter Phone Number ..."
+        ngModel
+        required
+      />
+    </div>
+    <button
+      [disabled]="!f.valid"
+      class="btn btn-primary btn_reserve"
+      type="submit"
+    >
+      Make Appointment
+    </button>
+  </form>
+</div>

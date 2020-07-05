@@ -1,0 +1,59 @@
+<div class="reserve__form">
+  <form (ngSubmit)="onReserve()" #reserveForm="ngForm">
+    <h2 class="form_title">Reserve Appointment</h2>
+    <label>Type</label> <br />
+    <select name="type" ngModel required>
+      <option *ngFor="let type of types" [value]="type.id">{{
+        type.name
+      }}</option>
+    </select>
+    <label>Available Appointments</label>
+    <select name="appointmentTime" ngModel required value="hlsdf">
+      <option
+        *ngFor="let appointmentTime of appointmentTime"
+        [value]="appointmentTime.id"
+        >{{ appointmentTime.appointmentDate }} |
+        {{ appointmentTime.fromTime }} - {{ appointmentTime.toTime }}</option
+      >
+    </select>
+    <div class="form-group" *ngIf="isDentist">
+      <label>Phone Number:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phoneNumber"
+        name="phoneNumber"
+        ngModel
+        required
+      />
+    </div>
+
+    <button
+      [disabled]="!reserveForm.valid"
+      class="btn btn-primary"
+      type="submit"
+    >
+      Reserve
+    </button>
+  </form>
+</div>
+
+<div class="cancel__form">
+  <form (ngSubmit)="onCancel()" #cancelForm="ngForm">
+    <h2 class="form_title">Cancel Previous Appointment</h2>
+    <div class="form-group" *ngIf="isDentist">
+      <label class="jmbg-input">Phone Number:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phoneNumber"
+        name="phoneNumber"
+        ngModel
+        required
+      />
+    </div>
+    <button [disabled]="!cancelForm.valid" class="btn btn-danger" type="submit">
+      Cancel
+    </button>
+  </form>
+</div>

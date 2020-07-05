@@ -1,0 +1,25 @@
+.appointment-title {
+  margin-bottom: 20px;
+  color: white;
+
+  text-align: center;
+}
+
+.login__form {
+  margin: auto;
+  text-align: center;
+  border: 5px solid black;
+  background-color: #f2f2f2;
+  width: 30%;
+  padding: 10px;
+}
+
+.btn_reserve {
+  background-color: burlywood;
+}
+
+.btn_reserve:hover {
+  border: 2px solid black;
+  background-color: darkgoldenrod;
+  color: black;
+}

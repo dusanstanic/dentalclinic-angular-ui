@@ -1,0 +1,53 @@
+<button class="button" *ngIf="isDentist" (click)="onShowToday()">
+  Todays Appointments
+</button>
+
+<div class="today_appointments" *ngIf="showToday">
+  <table>
+    <h4 class="table_title">Todays Appointments</h4>
+    <tr>
+      <th>Phone Number</th>
+      <th>Date</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Type</th>
+    </tr>
+    <tr *ngFor="let appointment of appointments">
+      <td>{{ appointment.phoneNumber }}</td>
+      <td>{{ appointment.appointmentTime.appointmentDate }}</td>
+      <td>{{ appointment.appointmentTime.fromTime }}</td>
+      <td>{{ appointment.appointmentTime.toTime }}</td>
+      <td>{{ appointment.type.name }}</td>
+    </tr>
+  </table>
+</div>
+
+<button class="button" *ngIf="isDentist" (click)="onShowWeekly()">
+  All Appointments
+</button>
+
+<div class="today_appointments" *ngIf="showWeekly">
+  <table>
+    <h4 class="table_title">All Appointments</h4>
+    <tr>
+      <th>Phone Number</th>
+      <th>Date</th>
+      <th>From</th>
+      <th>To</th>
+      <th>Type</th>
+    </tr>
+    <tr *ngFor="let appointment of appointmentsWeekly">
+      <td>{{ appointment.phoneNumber }}</td>
+      <td>{{ appointment.appointmentTime.appointmentDate }}</td>
+      <td>{{ appointment.appointmentTime.fromTime }}</td>
+      <td>{{ appointment.appointmentTime.toTime }}</td>
+      <td>{{ appointment.type.name }}</td>
+    </tr>
+    <div class="button_nav_main">
+      <button class="button_nav" click="onNext()">Previous</button>
+      <button class="button_nav" click="onPrevious()">Next</button>
+    </div>
+  </table>
+</div>
+
+<app-appointment></app-appointment>

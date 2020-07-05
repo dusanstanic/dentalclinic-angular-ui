@@ -1,0 +1,73 @@
+.button {
+  background-color: burlywood;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button:hover {
+  color: white;
+  background: rgb(214, 159, 86);
+}
+
+.today_appointments {
+  margin: 10px;
+}
+
+.table_title {
+  font-weight: bold;
+  color: black;
+  padding: 5px;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+  background: beige;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(212, 192, 192);
+}
+
+tr:nth-child(even):hover,
+tr:nth-child(odd):hover {
+  background-color: rgb(209, 196, 196);
+  color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: white;
+}
+
+div {
+  margin: 20px;
+}
+
+h4 {
+  color: white;
+}
+
+.button_nav_main {
+  text-align: center;
+}
+
+.button_nav {
+  display: inline-block;
+}
